@@ -1,0 +1,145 @@
+.EachPicture{
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #8eeee5;
+    margin: 5px;
+    background: #bff4ec;
+    transition: box-shadow .25s;
+    position: relative;
+}
+
+.EachPicture:hover{
+    box-shadow: 0 0 5px 5px #8eeee5;
+    transition: box-shadow .25s;
+}
+
+.EachPicture__Tooltop_text{
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.EachPicture__Tooltop_pos{
+    font-size: 16px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.EachPicture img{
+    height: 300px;
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Tooltip{
+    min-width: 120px;
+    max-width: 210px;
+    position: absolute;
+    z-index: 10;
+}
+
+.Tooltip::after{
+    content: '';
+    position: absolute;
+}
+
+.Tooltip.Top {
+    bottom: 100%;
+    left: 50%;
+    padding-bottom: 9px;
+    transform: translateX(-50%);
+}
+
+.Tooltip.Top::after {
+     border-left: 9px solid transparent;
+     border-right: 9px solid transparent;
+     border-top: 9px solid #000;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+
+}
+
+.Tooltip.Bottom {
+    top: 100%;
+    left: 50%;
+    padding-top: 9px;
+    transform: translateX(-50%);
+}
+
+.Tooltip.Bottom::after {
+     border-left: 9px solid transparent;
+     border-right: 9px solid transparent;
+     border-bottom: 9px solid #000;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+
+}
+
+.Tooltip.Left {
+    top: 50%;
+    right: 100%;
+    padding-right: 9px;
+    transform: translateY(-50%);
+}
+
+.Tooltip.Left::after {
+     border-left: 9px solid #000;
+     border-top: 9px solid transparent;
+     border-bottom: 9px solid transparent;
+     top: 50%;
+     right: 0;
+     transform: translateY(-50%);
+}
+
+.Tooltip.Right {
+    top: 50%;
+    left: 100%;
+    padding-left: 9px;
+    transform: translateY(-50%);
+}
+
+.Tooltip.Right::after {
+     border-right: 9px solid #000;
+     border-top: 9px solid transparent;
+     border-bottom: 9px solid transparent;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
+
+}
+
+.Tooltip_Message{
+    background: rgba(0,0,0,0.7);
+    border-radius: 3px;
+    border: 1px solid #000;
+    color: #eee;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 5px;
+    text-align: center;
+}
+
+@media(max-width: 767px) {
+    .EachPicture {
+        width: 45%;
+    }
+
+    .Tooltip.Left {
+        right: 70%;
+    }
+
+    .Tooltip.Right {
+        left: 70%;
+    }
+}
+
+@media(max-width: 470px) {
+    .EachPicture {
+        width: 100%;
+    }
+}

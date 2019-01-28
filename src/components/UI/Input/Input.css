@@ -1,0 +1,27 @@
+.Input_wrapper {
+    padding: 20px 25px;
+    width: 100%;
+}
+
+.Input_wrapper span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Input_wrapper input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.Input_wrapper input[type='radio'] {
+    width: 20px;
+}
+
+@media (max-width: 767px) {
+    .AddPicture_right {
+        width: 100%;
+    }
+}
